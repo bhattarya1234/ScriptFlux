@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScriptFlux</title>
+    <link href="style.css" rel="stylesheet">
+
+<script src="logic.js"></script>
+<link rel ="icon" href="favicon3.png" type="image/x-png">
+</head>
+<body>
+                   <!-- <form method="POST" action="/submit">-->
+
+    <div class="nav">
+        <ul>
+
+            <li onclick="edit('File')">
+            <div class = "dropdown">
+                <input type="submit" value="Save" class="submit">
+               <div class="dropdown-content">
+                    <a href="#" onclick="edit('New')">New</a>
+                    <a href="#" >Save</a>
+                    <a id="saveAs" href="#" onclick="edit('SaveAs')">Save As</a>
+                    <a href="#" onclick="edit('Exit')">Exit</a>
+                </div>
+            </div></li>
+            <li onclick="edit('Edit')">
+                 <div class = "dropdown">
+                <input type="button" value="Edit" class="submit">
+             <div class="dropdown-content">
+                    <a href="#" onclick = "show('SelectAll')">SelectAll<br></a>
+                    <a href="#" onclick="show('date')">Date</a>
+                </li>
+            <li onclick="edit('View')">
+             <div class="dropdown">
+                <input type="button" value="View" class="submit">
+             <div class="dropdown-content">
+                    <a href="#" onclick="view('zoomIn')">ZoomIN</a>
+                    <a href="#" onclick="view('zoomOut')">ZoomOut</a>
+                    </div>
+                </li>
+        </ul>
+  <ul>
+            <li onclick="transform('H1')" style ="font-family :cursive;">H1</li>
+            <li onclick="transform('I')" style ="font-family :cursive; font-style: italic;">I</li>
+            <li onclick="transform('B')" style ="font-family :cursive; font-weight: bold;">B</li>
+            <li onclick="transform('U')" style ="font-family :cursive; text-decoration: underline;">U</li>
+
+        </ul>
+
+    </div>
+       <textarea name="textArea" id="textArea" rows="5" cols="40" oninput="view()"></textarea>
+       <!--</form>-->
+       <div id="Compiler">
+       <button id="compile" style="text-align: center;" onclick="liveServer()">live server</button>
+       </div>
+</body>
+</html>
